@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="p5.min.js"></script>
+  <script src="sketch2.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #glass {
+      width: 100vw;
+      height: 100vh;
+      border: 2px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #water {
+      width: 100%;
+      height: 0;
+      background-color: #3498db;
+      position: absolute;
+      bottom: 0;
+      transition: height 1s linear;
+    }
+
+    .fish,
+    .pebble {
+      position: absolute;
+    }
+
+    .fish-body {
+      width: 40px;
+      height: 20px;
+      background-color: #e67e22; /* Orange fish body */
+      border-radius: 50%;
+      transform-origin: center bottom;
+    }
+
+    .fish-tail {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-top: 10px solid #e67e22; /* Orange fish tail */
+      border-bottom: 10px solid #e67e22; /* Orange fish tail */
+      position: absolute;
+      bottom: -10px;
+      left: -20px; /* Adjusted tail position to the left */
+    }
+
+    .fish-eye {
+      width: 5px;
+      height: 5px;
+      background-color: #2c3e50; /* Eye color */
+      border-radius: 50%; /* Make it round */
+      position: absolute;
+      top: 8px;
+      left: 25px; /* Adjusted eye position to the right */
+    }
+
+    .pebble {
+      width: 10px;
+      height: 10px;
+      background-color: #bdc3c7; /* Pebble color */
+      border-radius: 50%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="glass">
+  <div id="water"></div>
+</div>
+
+</body>
+</html>
